@@ -8,14 +8,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "(https://github.com/ManojBhandarkar98/namaste-react.git)"
+    "url": "git+https://github.com/ManojBhandarkar98/namaste-react.git"
   },
-  "keywords": [
-    "react"
-  ],
+  "keywords": [],
   "author": "Manoj Bhandarkar",
   "license": "ISC",
-  "devDependencies": {
+  "homepage": "https://github.com/ManojBhandarkar98/namaste-react#readme",
+  "dependencies": {
     "parcel": "^2.13.3"
   }
 }
