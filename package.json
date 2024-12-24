@@ -1,0 +1,21 @@
+{
+  "name": "namaste-react",
+  "version": "1.0.0",
+  "description": "This is react practice examples",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "(https://github.com/ManojBhandarkar98/namaste-react.git)"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Manoj Bhandarkar",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.13.3"
+  }
+}
