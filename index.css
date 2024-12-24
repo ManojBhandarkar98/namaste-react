@@ -1,6 +1,20 @@
-body {
-    background-color: #d8d5d5;
+.header{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
 }
-#heading {
-    color: red;
+.logo{
+    height: 120px;
+    width: 160px;
+    margin: 0 0;
+}
+.nav-items > ul{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 30px 40px;
+    font-size: 20px;
+}
+li{
+    list-style-type: none;
 }
