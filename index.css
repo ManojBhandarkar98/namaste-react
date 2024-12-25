@@ -18,3 +18,15 @@
 li{
     list-style-type: none;
 }
+.restro-card{
+    width: 200px;
+    height: 300px;
+    border: 1px solid black;
+}
+.Search-container{
+    padding: 10px;
+}
+.rest-logo{
+    width: 10px;
+    height: 10px;
+}
