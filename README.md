@@ -1,1 +1,1 @@
-# namaste-react
+# namaste-react-food-app
