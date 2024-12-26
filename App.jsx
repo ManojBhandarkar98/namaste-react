@@ -23,16 +23,50 @@ const Header = () => {
 }
 
 const RestroCard = (props) => {
+    const { restData } = props;
     return (
-        <div className="restro-card" style={{backgroundColor:"#f0f0f0"}}>
+        <div className="restro-card" style={{ backgroundColor: "#f0f0f0" }}>
             <img className="rest-logo" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/yzgqriufpzmloogcn2vl" alt="rest-logo" />
-            <h2>{props.resName}</h2>
-            <h4>{props.cuisines}</h4>
-            <h4>4.4 stars </h4>
-            <h4>33 minutes</h4>
+            <h2>{restData.info.name}</h2>
+            <h4>{restData.info.cuisines.join(", ")}</h4>
+            <h4>{restData.info.avgRating} rating</h4>
+            <h4>{restData.info.sla.deliveryTime} minutes</h4>
         </div>
     );
 }
+const resObj = 
+    {
+    "info": {
+        "id": "656629",
+        "name": "Subway",
+        "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/12/9/be1f8118-0971-405c-936a-84597c29de57_656629.JPG",
+        "locality": "Sudha Gauri Arcade",
+        "areaName": "Nirala Bazar",
+        "costForTwo": "₹350 for two",
+        "cuisines": [
+        "sandwich",
+        "Salads",
+        "wrap",
+        "Healthy Food"
+        ],
+        "avgRating": 4.2,
+                                        "parentId": "2",
+                                            "avgRatingString": "4.2",
+                                                "totalRatingsString": "1.4K+",
+                                                    "sla": {
+            "deliveryTime": 28,
+                "lastMileTravel": 3,
+                    "serviceability": "SERVICEABLE",
+                        "slaString": "25-30 mins",
+                            "lastMileTravelString": "3.0 km",
+                                "iconType": "ICON_TYPE_EMPTY"
+            }
+        }
+    }   
+
+
+
+
 
 const Body = () => {
     return (
@@ -40,10 +74,11 @@ const Body = () => {
             <div className="Search-container">
                 Search
             </div>
-           
+
             <div className="restro-container">
-            <RestroCard resName="Meghna Food" cuisines="Cuisines, North Indian"/>
-            <RestroCard resName="KFC"/>
+                <RestroCard restData={resObj} />
+
+
             </div>
 
         </div>
@@ -56,7 +91,7 @@ const AppLayout = () => {
         <div className="app">
             <Header />
             <Body />
-           
+
         </div>);
 }
 const root = ReactDOM.createRoot(document.getElementById("root"));
