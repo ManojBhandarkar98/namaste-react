@@ -22,12 +22,14 @@ const Header = () => {
     );
 }
 
-const RestroCard = () => {
+const RestroCard = (props) => {
     return (
         <div className="restro-card" style={{backgroundColor:"#f0f0f0"}}>
             <img className="rest-logo" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/yzgqriufpzmloogcn2vl" alt="rest-logo" />
-            <h2>Meghna Foods</h2>
-            sdsd
+            <h2>{props.resName}</h2>
+            <h4>{props.cuisines}</h4>
+            <h4>4.4 stars </h4>
+            <h4>33 minutes</h4>
         </div>
     );
 }
@@ -40,7 +42,8 @@ const Body = () => {
             </div>
            
             <div className="restro-container">
-            <RestroCard />
+            <RestroCard resName="Meghna Food" cuisines="Cuisines, North Indian"/>
+            <RestroCard resName="KFC"/>
             </div>
 
         </div>
