@@ -940,9 +940,8 @@ const Body = () => {
 
             <div className="restro-container">
                 {
-                    resObj.map(restaurant => <RestroCard restData={restaurant} />)
+                    resObj.map(restaurant => <RestroCard key ={restaurant.info.id} restData={restaurant} />)
                 }
-
             </div>
 
         </div>
