@@ -33,6 +33,10 @@ li{
     display: flex;
     flex-wrap: wrap;
 }
+.filter-btn{
+ 
+    margin: 10px;
+}
 .Search-container{
     padding: 10px;
 }
