@@ -44,3 +44,13 @@ li{
     width: 100%;
     height: 140px;
 }
+.shimmer-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.shimmer-card{
+    width: 200px;
+    height: 350px;
+    background-color: #f0f0f0;
+    margin: 5px;
+}
