@@ -17,10 +17,10 @@ const Body = () => {
         setListOfRestaurants(json?.data?.cards[2]?.data?.data?.cards);
     }
 
-    if (listOfRestaurants.length == 0)
-        return <Shimmer />;
+    // if (listOfRestaurants.length == 0)
+    //     return <Shimmer />;      //ternary operator
 
-    return (
+    return (listOfRestaurants.length == 0)?<Shimmer />:(
         <div className="wrapper">
             <div className="filter">
                 <button className="filter-btn" onClick={() => {
