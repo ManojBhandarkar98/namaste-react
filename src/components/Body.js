@@ -6,6 +6,8 @@ const Body = () => {
 
     const [listOfRestaurants, setListOfRestaurants] = useState([]);     //array return , defualt value is empty array we pass behave normal var
 
+    const [searchText,setSearchText] = useState("");
+
     useEffect(() => {
         fetchData();
     }, [])
@@ -23,6 +25,12 @@ const Body = () => {
     return (listOfRestaurants.length == 0)?<Shimmer />:(
         <div className="wrapper">
             <div className="filter">
+                <div className="search">
+                    <input type="text" className="search-box" value={searchText} onChange={(e)=>{setSearchText(e.target.value)}}/>
+                    <button onClick={()=>{
+
+                    }}>Search</button>
+                </div>
                 <button className="filter-btn" onClick={() => {
                     const filteredList = listOfRestaurants.filter(
                         (res) => res.data.avgRating > 4
