@@ -5,6 +5,7 @@ import Body from "./src/components/Body";
 import About from "./src/components/About";
 import Contact from "./src/components/Contact";
 import { createBrowserRouter,RouterProvider } from "react-router-dom";
+import Error from "./src/components/Error";
 
 //react Element
 const jsxHeading = (<h1 id="heading">Namaste React using JSX 🚀</h1>);
@@ -22,7 +23,8 @@ const AppLayout = () => {
 const appRouter = createBrowserRouter([
     {
         path: "/",
-        element: <AppLayout />
+        element: <AppLayout />,
+        errorElement:<Error/>
     },
     {
         path: "/about",
