@@ -7,6 +7,7 @@ const Body = () => {
     const [listOfRestaurants, setListOfRestaurants] = useState([]);     //array return , defualt value is empty array we pass behave normal var
 
     const [searchText,setSearchText] = useState("");
+    const [filteredRestaurant,SetFilteredRestaurant] = useState([]);
 
     useEffect(() => {
         fetchData();
@@ -17,6 +18,7 @@ const Body = () => {
         const json = await data.json()
 
         setListOfRestaurants(json?.data?.cards[2]?.data?.data?.cards);
+        SetFilteredRestaurant(json?.data?.cards[2]?.data?.data?.cards)
     }
 
     // if (listOfRestaurants.length == 0)
@@ -36,13 +38,13 @@ const Body = () => {
                     const filteredList = listOfRestaurants.filter(
                         (res) => res.data.avgRating > 4
                     );
-                    setListOfRestaurants(filteredList);
+                    SetFilteredRestaurant(filteredList);
                 }}>Top Rated Restaurant </button>
             </div>
 
             <div className="restro-container">
                 {
-                    listOfRestaurants.map(restaurant =>
+                    filteredRestaurant.map(restaurant =>
                         <RestroCard key={restaurant.data.id} restData={restaurant} />)
                 }
             </div>
